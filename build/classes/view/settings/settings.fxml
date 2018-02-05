@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="350.0" minWidth="350.0" prefHeight="400.0" prefWidth="400.0" stylesheets="&#10;  " xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.settings.SettingsPresenter">
+   <children>
+      <TabPane layoutX="100.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="SMTP">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="371.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+                           <children>
+                              <HBox prefHeight="35.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="host name:">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <JFXTextField fx:id="hostName" focusColor="#1541c6" maxWidth="200.0" minWidth="50.0" prefWidth="200.0" unFocusColor="#4b7fda">
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="2.5" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="35.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="tcp/ip port:">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <JFXTextField fx:id="port" focusColor="#1541c6" prefWidth="100.0" unFocusColor="#4b7fda">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                  
+                                    <Label text="Default: 587">
+                                       <HBox.margin>
+                                          <Insets left="27.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Montserrat Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <JFXToggleButton fx:id="isTLSEnabled" alignment="TOP_LEFT" text="STARTTLS" toggleColor="#374f9a" toggleLineColor="#c4d0f5">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="12.0" />
+                                 </font></JFXToggleButton>
+                              <Separator prefWidth="200.0" />
+                              <HBox prefHeight="35.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="user name:">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <JFXTextField fx:id="userName" focusColor="#1541c6" maxWidth="200.0" minWidth="50.0" prefWidth="200.0" unFocusColor="#4b7fda">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="0.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="password:">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="12.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <JFXPasswordField fx:id="userPassword" focusColor="#1541c6" prefWidth="200.0" unFocusColor="#4b7fda">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </JFXPasswordField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <JFXToggleButton fx:id="isAuthentication" alignment="TOP_LEFT" text="Required Authentication" toggleColor="#374f9a" toggleLineColor="#c4d0f5">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Montserrat Regular" size="12.0" />
+                                 </font>
+                              </JFXToggleButton>
+                              <Separator prefWidth="200.0" />
+                              <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0">
+                                 <children>
+                                    <JFXButton onAction="#onSaveButtonClick" text="Save">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Separator prefWidth="200.0" />
+                              <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="statusLabel" textFill="#498efc">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab disable="true" text="IMAP/POP3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

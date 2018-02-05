@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderPane" style="-fx-background-color: GAINSBORO;" styleClass="\@root.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.root.RootPresenter">
+   <top>
+      <MenuBar maxHeight="50.0" minWidth="25.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu id="menuFile" mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onOpenMenuButtonClick" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#onSaveAsMenuButtonClick" text="Save as..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="Load Contacts">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onLoadContactsFromFileMenuButtonClick" text="Excel File" />
+                        <MenuItem disable="true" mnemonicParsing="false" text="Database connection..." />
+                     </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onSendTemplateMenuButtonClick" text="Send template" />
+                  <MenuItem mnemonicParsing="false" text="Exit" />
+               </items>
+            </Menu>
+            <Menu id="menuEdit" mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onAddAttachmentMenuButtonClick" text="Add Attachment" />
+               </items>
+            </Menu>
+            <Menu id="menuConfiguration" mnemonicParsing="false" text="Configuration">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onServerSettingsMenuButtonClick" text="Server Settings" />
+               </items>
+            </Menu>
+            <Menu id="menuPreview" mnemonicParsing="false" text="Preview">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onShowInWindowMenuButtonClick" text="Show in Window" />
+               </items>
+            </Menu>
+            <Menu id="menuHelp" mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onAboutMenuButtonClick" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="750.0" prefWidth="725.0" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane maxHeight="750.0" prefHeight="0.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane maxHeight="50.0" minHeight="25.0" prefHeight="35.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
